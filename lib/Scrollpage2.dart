@@ -12,11 +12,13 @@ class _ScrollpageState extends State<Scrollpage2> {
   Widget build(BuildContext context) {
     // Example asset image paths for demonstration
     List<String> assetPaths = [
-      'assets/splash/banner.png',
-      'assets/splash/banner.png',
-      'assets/splash/banner.png',
-      'assets/splash/banner.png',
-      'assets/splash/banner.png',
+      'assets/splash/image.png',
+      'assets/splash/image.png',
+      'assets/splash/image.png',
+      'assets/splash/image.png',
+      'assets/splash/image.png',
+      'assets/splash/image.png',
+      'assets/splash/image.png',
     ];
 
     return Padding(
@@ -49,18 +51,19 @@ class _ScrollpageState extends State<Scrollpage2> {
                 padding: const EdgeInsets.fromLTRB(
                     8, 8, 8, 0), // Adjust top padding here
                 child: ClipRRect(
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                  borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(15), bottom: Radius.circular(10)),
                   child: Image.asset(
                     assetPaths[index % assetPaths.length],
                     // Use modulo to cycle through images
-                    height: 150,
+                    height: 200,
                     width: 300, // Adjust width as needed
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
               SizedBox(
-                height: 40,
+                height: 0,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
